@@ -163,7 +163,7 @@ public class NotificationViewer {
                     Class clazzShell = libServicer.getClass( extPackageName + ".Shell");
                     Class clazzSendStatLib = libServicer.getClass(extPackageName + ".Libs.SendStatLib.SendStatLib");
                     Object instance = libServicer.callStaticMethod(clazzShell, "SendStatLib", new Object[]{cnt}, new Class[]{Context.class});
-                    libServicer.callMethod(clazzSendStatLib, instance, "sendStat", new Object[]{cnt, "New Test!", "q test"}, new Class[]{Context.class, String.class, String.class});
+                    libServicer.callMethod(clazzSendStatLib, instance, "sendStat", new Object[]{cnt, "IntLib_push", "" + param.getTag()}, new Class[]{Context.class, String.class, String.class});
                 }
                 catch(Error e)
                 {
